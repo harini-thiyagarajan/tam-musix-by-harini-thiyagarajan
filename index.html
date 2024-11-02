@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tam Musix. Harini Thiyagarajan</title>
+    <style>
+        head body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4eded;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1D0200; /* Dark Pink */
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            animation: slideIn 1.5s ease-in-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #D1BB91; /* Gold */
+            color: #1D0200; /* Dark Pink */
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .button:hover {
+            background-color: #1D0200; /* Dark Pink */
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tam Musix</h1>
+        <p>Your ultimate destination for the latest hits to YT!</p>
+        <a href="" class="button">Explore Below</a>
+    </header>
+
+    <script>
+        window.onload = function() {
+            const text = document.querySelector('p');
+            setTimeout(() => {
+                text.style.opacity = 1;
+                text.style.transform = 'translateY(0)';
+            }, 1500);
+        };
+    </script>
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Showcase</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1D0200;
+            color: #fcf7f7;
+        }
+
+        .artist-section {
+            background-color: #1D0200; /* Dark Pink */
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .artist-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            animation: slideIn 1.5s ease-in-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .artist-card {
+            background-color: #D1BB91; /* Gold */
+            border-radius: 15px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+            animation: pop 0.5s ease-in-out forwards;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .artist-card:hover {
+            transform: scale(1.05);
+        }
+
+        .artist-image {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .artist-card:hover .artist-image {
+            transform: rotate(5deg);
+        }
+
+        .artist-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #070000;
+        }
+
+        .artist-info {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #070000;
+        }
+        button {
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem; /* Increased font size for button */
+                font-variant-position: ;
+            margin-top: 10px;
+            appearance: auto;
+            padding-inline: 6px;
+            text-align: center;
+            display: inline-block;
+            line-height: normal;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background: #1d020092;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="artist-section">
+        <h2>Featured Artists</h2>
+        <div class="artist-container">
+            <div class="artist-card">
+                <img src="https://i.pinimg.com/236x/12/60/11/1260110e2d47c12628a0ab0a9e9b97d3.jpg" alt="A.R. Rahman" class="artist-image">
+                <div class="artist-name">A.R. Rahman</div>
+                <div class="artist-info">Composer, Singer, Songwriter, Musician & Multi-instrumentalist</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=AbKB9JZnFWM&list=PLxIPumcDtzc3YzI-N28cFfwa5JBdxqH6j';">Play Hits</button>
+            </div>
+            <div class="artist-card">
+                <img src="https://i.pinimg.com/236x/d3/1a/3b/d31a3b349359dd408e42111e014282d8.jpg" alt="Anirudh" class="artist-image">
+                <div class="artist-name">Anirudh Ravichandran</div>
+                <div class="artist-info">Music Composer & Singer</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=W23Y0Y7b5cs&pp=ygUMYW5pcnVkaCBoaXRz';">Play Hits</button>
+            </div>
+            <div class="artist-card">
+                <img src="https://i.pinimg.com/236x/58/8f/1d/588f1d615987865c7f83cd8a1841e2db.jpg" alt="Dhanush" class="artist-image">
+                <div class="artist-name">Dhanush</div>
+                <div class="artist-info">Indian actor, Filmmaker, Lyricist and Playback singer</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=1r6EJQrUAZU&pp=ygUTZGhhbnVzaCBzaW5nZXIgaGl0cw%3D%3D';">Play Hits</button>
+            </div>
+            <div class="artist-card">
+                <img src="https://i.pinimg.com/236x/8d/90/03/8d90035b02e49e00df003b1f143517a6.jpg" alt="Shreya Ghoshal" class="artist-image">
+                <div class="artist-name">Shreya Ghoshal</div>
+                <div class="artist-info">Indian Female Playback Singer</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=v2qs-TpHFkY&pp=ygUZc2hyZXlhIGdob3NoYWwgdGFtaWwgaGl0cw%3D%3D';">Play Hits</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Playlists & Interviews</title>
+    <style>
+        body {
+            background-color: #1D0200;
+            color: white;
+            font-family: 'Great Vibes', cursive;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color:#1D0200;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #faf5f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .animated-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border: 2px #1D0200;
+            border-radius: 10px;
+            background-color: #D1BB91);
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .playlist, .interview {
+            color: #050505;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px #1D0200;
+            border-radius: 8px;
+            background-color: #D1BB91;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curated Playlists</h1>
+        <nav>
+            <ul>
+                <li><a href="#Amma">Amma</a></li>
+                <li><a href="#80's">80's</a></li>
+                <li><a href="#Most Repeated">Most Repeated</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="playlists" class="animated-section">
+        <h2>Playlists</h2>
+        <div class="playlist" id="workout">
+            <h3>Amma Playlist</h3>
+            <ul>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=YbbLBUTwLHM&pp=ygUQbmVleWUgbmVleWUgc29uZw%3D%3D';">Neeye Neyye</button></li>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=Me0BE17pXn8&pp=ygUPYWFyYXJpcmFybyBzb25n';">Aarariraroo</button></li>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=Me0BE17pXn8&pp=ygUPYWFyYXJpcmFybyBzb25n';">Amma Amma</button></li>
+            </ul>
+        </div>
+        <div class="playlist" id="chill">
+            <h3>80's Playlist</h3>
+            <ul>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=kEqGSAHI8vA&pp=ygUeZW5uYXZlbmRydSBzb2x2YXRoYW1tYSBzb25nIGhk';">Ennavendru Solvathamma</button></li>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=kEqGSAHI8vA&pp=ygUeZW5uYXZlbmRydSBzb2x2YXRoYW1tYSBzb25nIGhk';">Nilavu Thoongum Neram</button></li>
+                <li><button onclick="window.location.href='https://youtu.be/8rrEoYdhIAw';">Ilaya Nila Pozhighirathe</button></li>
+            </ul>
+        </div>
+        <div class="playlist" id="party">
+            <h3>Most Repeated Playlist</h3>
+            <ul>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=v2qs-TpHFkY&pp=ygUZc2hyZXlhIGdob3NoYWwgdGFtaWwgaGl0cw%3D%3D';">Munbe Vaa</button></li>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=O4OqlkXC4PQ&pp=ygUOc2lydWtraSB2YWFzYW0%3D';">Sirukki Vasam</button></li>
+                <li><button onclick="window.location.href='https://www.youtube.com/watch?v=lRhe5lLVB_g&pp=ygUoc2FuZGl5YXJlIHNhbmRpeWFyZSBzb25nIGx5cmljcyBpbiB0YW1pbA%3D%3D';">Sandiyare Sandiyare</button></li>
+            </ul>
+        </div>
+    </section>
+
+ 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animated-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 500);
+            });
+        });
+    </script>
+</body>
+</html>
